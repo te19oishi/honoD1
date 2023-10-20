@@ -25,7 +25,7 @@ app.use('/auth/*', async (c, next) => {
   return auth(c, next);
 });
 
-app.get('/', c => c.text('Hello World!!!'));
+app.get('/', c => c.text('Hello World'));
 
 app.post('/api/users', async c => {
   console.log('c', c);
