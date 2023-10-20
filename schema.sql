@@ -3,16 +3,10 @@ CREATE TABLE users (
 	id INTEGER PRIMARY KEY AUTOINCREMENT, 
 	username TEXT NOT NULL,
 	email TEXT NOT NULL,
-	group_id INT,
+  role TEXT NOT NULL DEFAULT 'employee',
+	salary INTEGER NOT NULL DEFAULT 0,
 	created_at TEXT NOT NULL DEFAULT (DATETIME('now', 'localtime')),
 	updated_at TEXT NOT NULL DEFAULT (DATETIME('now', 'localtime'))
 );
+INSERT INTO Users (username, email, salary) VALUES ("oishi", "mail", 1000),("Hanako", "mail2", 3500),("Tom", "mail3", 4000);
 
-
-DROP TABLE IF EXISTS groups;
-CREATE TABLE groups (
-	id INTEGER PRIMARY KEY AUTOINCREMENT, 
-	groupname TEXT NOT NULL,
-	created_at TEXT NOT NULL DEFAULT (DATETIME('now', 'localtime')),
-	updated_at TEXT NOT NULL DEFAULT (DATETIME('now', 'localtime'))
-);

@@ -1,8 +1,8 @@
-name = "cloudflare-advent-calendar-16"
+name = "cloudflare-workers-sample"
 main = "src/index.ts"
-compatibility_date = "2022-12-14"
+compatibility_date = "2023-10-20"
 
 [[ d1_databases ]]
 binding = "DB" # i.e. available in your Worker on env.DB
-database_name = "qiita-advent-16"
-database_id = "2d34d3a0-fbd6-430d-bf77-10f319a53751"
+database_name = "honoD1"
+database_id = "703010bb-4623-40e4-9f27-85e7fd7b53b7"
