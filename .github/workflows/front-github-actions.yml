@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - 'feat/**/**'
+
+jobs:
+  test:
+    # 最新バージョンのUbuntuLinuxランナーで実行するようにジョブを構成
+    runs-on: ubuntu-latest
+    # testジョブで実行されるステップをグループ化
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          cache: 'npm'
+      - name: install
+        run: yarn install
+      - name: ESLint
+        run: yarn fix:eslint
+      - name: Prettier
+        run: yarn fix:prettier
+      - name: npm CI
+        run: npm ci
+      - name: npm Test
+        run: npm test

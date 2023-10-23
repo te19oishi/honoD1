@@ -26,7 +26,9 @@
         "fix": "gts fix",
         "prepare": "npm run compile",
         "pretest": "npm run compile",
-        "posttest": "npm run lint"
+        "posttest": "npm run lint",
+        "fix:eslint": "eslint src --ext .js,.ts,.jsx,.tsx --fix",
+        "fix:prettier": "prettier --write ."
     },
     "dependencies": {
         "hono": "^2.6.1",
