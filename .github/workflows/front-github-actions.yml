@@ -26,7 +26,7 @@ jobs:
       #   run: yarn fix:eslint
       # - name: Prettier
       #   run: yarn fix:prettier
-      - name: npm CI
-        run: npm ci
+      # - name: npm CI
+      #   run: npm ci
       - name: npm Test
         run: npm test
