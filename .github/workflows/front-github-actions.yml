@@ -20,13 +20,13 @@ jobs:
       - name: Export target files to environment variables
         run: |
           echo "TARGET_FILES=$(git diff --name-only origin/main...HEAD | grep -E '\.(js|jsx|ts|tsx)$' | tr '\n' ' ')" >> $GITHUB_ENV
-      - name: install
-        run: yarn install
+      # - name: install
+      #   run: yarn install
       # - name: ESLint
       #   run: yarn fix:eslint
       # - name: Prettier
       #   run: yarn fix:prettier
-      # - name: npm CI
-      #   run: npm ci
+      - name: npm CI
+        run: npm ci
       - name: npm Test
         run: npm test
