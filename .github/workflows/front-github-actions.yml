@@ -24,9 +24,9 @@ jobs:
         run: yarn install
       # - name: ESLint
       #   run: yarn fix:eslint
-      - name: Prettier
-        run: yarn fix:prettier
-      - name: npm CI
-        run: npm ci
+      # - name: Prettier
+      #   run: yarn fix:prettier
+      # - name: npm CI
+      #   run: npm ci
       - name: npm Test
         run: npm test
