@@ -17,6 +17,9 @@ jobs:
         with:
           node-version: '16.x'
           cache: 'npm'
+      - name: Export target files to environment variables
+        run: |
+          echo "TARGET_FILES=$(git diff --name-only origin/main...HEAD | grep -E '\.(js|jsx|ts|tsx)$' | tr '\n' ' ')" >> $GITHUB_ENV
       - name: install
         run: yarn install
       - name: ESLint
